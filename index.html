@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body
+		{
+			background-image: url('image3.jpg');
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		*:focus
+		{
+			outline: 0;
+		}
+		#button1
+		{
+			background-color: gold;
+			border-style: none;
+			border-radius: 25px 10px 25px 10px;
+			width: 200px;
+			height: 50px;
+			border-spacing:100px;
+		}
+		.press
+		{
+			text-align: center;
+			padding-top:30px;
+		}
+		.txt
+		{
+			font-size: 28px;
+			font-family: Calibri;
+		}
+		#speak
+		{
+			color: gold;
+			padding-top: 200px;
+			padding-left: 20px;
+			text-align: center;
+			font-family:"Calibri light";
+			font-size: 40px;
+		}
+	</style>
+	<title>Du Kanye neeche</title>
+</head>
+<body>
+	<div id="speak">Witness wisdom in its purest form.</div>
+	<div class="press">
+	<button id="button1" onclick="quot()"><div class="txt">Get Wested</div></button>
+	</div>
+
+</body>
+<script type="text/javascript">
+	function quot()
+	{
+		var q= new XMLHttpRequest();
+		q.open('GET','https://api.kanye.rest',true);
+		q.onprogress=function()
+		{
+			var l=document.getElementById('speak');
+			l.innerHTML="Your content is loading";
+			l.style.color="blue";
+		}
+		q.onload=function()
+		{
+			if(this.status==200)
+			{
+				var s=JSON.parse(this.responseText);
+				var output='"'+s.quote+'"';
+			}
+			var final=document.getElementById('speak');
+			final.innerHTML=output;
+			final.style.color="gold";
+
+		}
+		q.send();
+	}
+</script>
+</html>

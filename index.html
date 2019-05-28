@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
+		<img src="image3.jpg">
 	<style>
 		body
-		{
-			background-image: url('image3.jpg');
-			background-size: cover;
-			background-attachment: fixed;
-		}
+		{}
 		*:focus
 		{
 			outline: 0;
+		}
+		img
+		{
+
+			background-image: url('image3.jpg');
+			background-size: cover;
+			filter: blur(12px);
+			transform: scale(1.1);
+		}
+		#speak
+		{
+			color: gold;
+			text-align: center;
+			font-family:"Calibri light";
+			font-size: 40px;
+			position: relative;
+			bottom: 900px;
+		}
+		.press
+		{
+			text-align: center;
+		}
+		.but
+		{
+			position: relative;
+			bottom: 800px;
 		}
 		#button1
 		{
@@ -21,33 +44,26 @@
 			height: 50px;
 			border-spacing:100px;
 		}
-		.press
-		{
-			text-align: center;
-			padding-top:30px;
-		}
+
 		.txt
 		{
 			font-size: 28px;
 			font-family: Calibri;
-		}
-		#speak
-		{
-			color: gold;
-			padding-top: 200px;
-			padding-left: 20px;
-			text-align: center;
-			font-family:"Calibri light";
-			font-size: 40px;
 		}
 	</style>
 	<title>Du Kanye neeche</title>
 </head>
 <body>
 	<div id="speak">Witness wisdom in its purest form.</div>
-	<div class="press">
-	<button id="button1" onclick="quot()"><div class="txt">Get Wested</div></button>
-	</div>
+	<table class="but" align="center">
+		<tr>
+			<td width="33.33%"></td>
+		<td class="press" align="center" width="33.33%">
+	<button id="button1" onclick="quot()"><div class="txt">Get Wested</div></button></td>
+			<td width="33.33%"></td>
+		</tr>
+	</table>
+
 
 </body>
 <script type="text/javascript">
